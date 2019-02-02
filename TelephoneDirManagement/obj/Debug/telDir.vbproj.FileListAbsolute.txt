@@ -1,0 +1,20 @@
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\bin\Debug\telDir.exe.config
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\bin\Debug\telDir.exe
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\bin\Debug\telDir.pdb
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\bin\Debug\telDir.xml
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.Form1.resources
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.Resources.resources
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.vbproj.GenerateResource.Cache
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.exe
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.xml
+c:\users\dell\documents\visual studio 2013\Projects\telDir\telDir\obj\Debug\telDir.pdb
+C:\Users\Dell\Desktop\Teldir\telDir\bin\Debug\telDir.exe.config
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.exe
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.xml
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.pdb
+C:\Users\Dell\Desktop\Teldir\telDir\bin\Debug\telDir.exe
+C:\Users\Dell\Desktop\Teldir\telDir\bin\Debug\telDir.pdb
+C:\Users\Dell\Desktop\Teldir\telDir\bin\Debug\telDir.xml
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.Form1.resources
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.Resources.resources
+C:\Users\Dell\Desktop\Teldir\telDir\obj\Debug\telDir.vbproj.GenerateResource.Cache
