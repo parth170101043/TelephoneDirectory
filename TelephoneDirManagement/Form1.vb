@@ -30,11 +30,11 @@ Public Class Form1
             Return 1
         ElseIf num = 3 And str = "notarobot" Then
             Return 1
-        ElseIf num = 4 And str = "captcha" Then
+        ElseIf num = 4 And str = "CAPTCHA" Then
             Return 1
-        ElseIf num = 5 And str = "captcha" Then
+        ElseIf num = 5 And str = "CAPTCHA" Then
             Return 1
-        ElseIf num = 6 And str = "google" Then
+        ElseIf num = 6 And str = "Google" Then
             Return 1
         ElseIf num = 7 And str = "fkr92pd" Then
             Return 1
