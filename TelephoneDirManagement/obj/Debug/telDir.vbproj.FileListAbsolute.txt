@@ -44,3 +44,16 @@ C:\Users\Dell\Desktop\myTel\TelephoneDirManagement\obj\Debug\telDir.RegForm2.res
 C:\Users\Dell\Desktop\myTel\TelephoneDirManagement\obj\Debug\telDir.RegForm3.resources
 C:\Users\Dell\Desktop\myTel\TelephoneDirManagement\obj\Debug\telDir.Resources.resources
 C:\Users\Dell\Desktop\myTel\TelephoneDirManagement\obj\Debug\telDir.vbproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\bin\Debug\telDir.exe.config
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.exe
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.xml
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.pdb
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\bin\Debug\telDir.exe
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\bin\Debug\telDir.pdb
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\bin\Debug\telDir.xml
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.Form1.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.RegForm1.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.RegForm2.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.RegForm3.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.Resources.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.vbproj.GenerateResource.Cache

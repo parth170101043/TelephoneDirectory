@@ -3,6 +3,24 @@ Public Class Form1
     Dim MySqlConn As MySqlConnection
     Dim mycom As MySqlCommand
     Dim captcha As Integer
+    Dim number As Integer = 7
+    Sub loadCaptcha()
+        If captcha = 1 Then
+            pic5.Image = My.Resources.img2
+        ElseIf captcha = 2 Then
+            pic5.Image = My.Resources.imkiz
+        ElseIf captcha = 3 Then
+            pic5.Image = My.Resources.not_a_robot
+        ElseIf captcha = 4 Then
+            pic5.Image = My.Resources.captcha
+        ElseIf captcha = 5 Then
+            pic5.Image = My.Resources.captcha2
+        ElseIf captcha = 6 Then
+            pic5.Image = My.Resources.google
+        Else
+            pic5.Image = My.Resources.fkr92pd
+        End If
+    End Sub
     Function verify_captcha(num As Integer, str As String)
         'verifies captcha string against integer corresponding to image
 
@@ -11,6 +29,14 @@ Public Class Form1
         ElseIf num = 2 And str = "imkiz" Then
             Return 1
         ElseIf num = 3 And str = "notarobot" Then
+            Return 1
+        ElseIf num = 4 And str = "captcha" Then
+            Return 1
+        ElseIf num = 5 And str = "captcha" Then
+            Return 1
+        ElseIf num = 6 And str = "google" Then
+            Return 1
+        ElseIf num = 7 And str = "fkr92pd" Then
             Return 1
         Else
             Return 0
@@ -23,15 +49,9 @@ Public Class Form1
         MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
         Try
             MySqlConn.Open()
-            captcha = CInt(Math.Ceiling(Rnd() * 3))
-            captcha = captcha Mod 3 + 1
-            If captcha = 1 Then
-                pic5.Image = My.Resources.img2
-            ElseIf captcha = 2 Then
-                pic5.Image = My.Resources.imkiz
-            Else
-                pic5.Image = My.Resources.not_a_robot
-            End If
+            captcha = CInt(Math.Ceiling(Rnd() * number))
+            captcha = captcha Mod number + 1
+            loadCaptcha()
             pic1.Image = My.Resources.online
             MySqlConn.Close()
         Catch ex As MySqlException
@@ -77,14 +97,8 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        captcha = (captcha + 1) Mod 3 + 1
-        If captcha = 1 Then
-            pic5.Image = My.Resources.img2
-        ElseIf captcha = 2 Then
-            pic5.Image = My.Resources.imkiz
-        Else
-            pic5.Image = My.Resources.not_a_robot
-        End If
+        captcha = (captcha + 1) Mod number + 1
+        loadCaptcha()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
