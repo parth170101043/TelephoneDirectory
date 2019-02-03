@@ -99,4 +99,9 @@ Public Class Form1
         PictureBox4.Show()
 
     End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Me.Hide()
+        RegForm1.Show()
+    End Sub
 End Class
