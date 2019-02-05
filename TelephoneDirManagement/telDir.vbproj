@@ -124,6 +124,11 @@
     <Compile Include="UserForm2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="user_dataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>user_dataDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -162,6 +167,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="user_dataDataSet.xsc">
+      <DependentUpon>user_dataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="user_dataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>user_dataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="user_dataDataSet.xss">
+      <DependentUpon>user_dataDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />

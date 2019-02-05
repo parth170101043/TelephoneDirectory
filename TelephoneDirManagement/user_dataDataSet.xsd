@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="user_dataDataSet" targetNamespace="http://tempuri.org/user_dataDataSet.xsd" xmlns:mstns="http://tempuri.org/user_dataDataSet.xsd" xmlns="http://tempuri.org/user_dataDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="user_dataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="user_dataConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.telDir.My.MySettings.GlobalReference.Default.user_dataConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="admin_dataTableAdapter" GeneratorDataComponentClassName="admin_dataTableAdapter" Name="admin_data" UserDataComponentName="admin_dataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="user_dataConnectionString (MySettings)" DbObjectName="user_data.admin_data" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Name`, `UserName`, `Password` FROM `admin_data`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_tableTableAdapter" GeneratorDataComponentClassName="user_tableTableAdapter" Name="user_table" UserDataComponentName="user_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="user_dataConnectionString (MySettings)" DbObjectName="user_data.user_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `UID`, `UserName`, `Password`, `Phone`, `email`, `City`, `Gender`, `Occupation`, `Name`, `Approved` FROM `user_table`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="user_dataDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="user_dataDataSet" msprop:Generator_UserDSName="user_dataDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="admin_data" msprop:Generator_TableClassName="admin_dataDataTable" msprop:Generator_TableVarName="tableadmin_data" msprop:Generator_TablePropName="admin_data" msprop:Generator_RowDeletingName="admin_dataRowDeleting" msprop:Generator_RowChangingName="admin_dataRowChanging" msprop:Generator_RowEvHandlerName="admin_dataRowChangeEventHandler" msprop:Generator_RowDeletedName="admin_dataRowDeleted" msprop:Generator_UserTableName="admin_data" msprop:Generator_RowChangedName="admin_dataRowChanged" msprop:Generator_RowEvArgName="admin_dataRowChangeEvent" msprop:Generator_RowClassName="admin_dataRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user_table" msprop:Generator_TableClassName="user_tableDataTable" msprop:Generator_TableVarName="tableuser_table" msprop:Generator_TablePropName="user_table" msprop:Generator_RowDeletingName="user_tableRowDeleting" msprop:Generator_RowChangingName="user_tableRowChanging" msprop:Generator_RowEvHandlerName="user_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="user_tableRowDeleted" msprop:Generator_UserTableName="user_table" msprop:Generator_RowChangedName="user_tableRowChanged" msprop:Generator_RowEvArgName="user_tableRowChangeEvent" msprop:Generator_RowClassName="user_tableRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
