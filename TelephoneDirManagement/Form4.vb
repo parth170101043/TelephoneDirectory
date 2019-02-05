@@ -28,6 +28,7 @@
         ' If TextBox2.Text = TextBox3.Text Then
         Me.Hide()
         MessageBox.Show("Request sent To Admin")
+        Form1.Show()
         ' Else
         ' Label5.Text = "Password did't match "
         'TextBox3.Text = ""

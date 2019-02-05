@@ -84,6 +84,8 @@ Public Class Form1
             If count = 1 Then
                 If verify_captcha(captcha, TextBox3.Text) = 1 Then
                     MessageBox.Show("verified")
+                    UserForm1.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("try again")
                 End If
