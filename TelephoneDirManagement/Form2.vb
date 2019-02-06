@@ -32,14 +32,14 @@
             Button1.ForeColor = Color.WhiteSmoke
         End If
     End Sub
-    Function IsValidFileNameOrPath(ByVal name As String) As Boolean '''''for name
+    Function IsValidFileNameOrPath(ByVal name As String, ByVal str1 As String) As Boolean '''''for name
         ' Determines if the name is Nothing.
         If name Is Nothing Then
             Return False
         End If
 
         ' Determines if there are bad characters in the name.
-        For Each badChar As Char In noval
+        For Each badChar As Char In str1
             If InStr(name, badChar) > 0 Then
                 Return False
             End If
@@ -48,22 +48,7 @@
         ' The name passes basic validation.
         Return True
     End Function
-    Function IsValidFileNameOrPath2(ByVal name As String) As Boolean '''for phone
-        ' Determines if the name is Nothing.
-        If name Is Nothing Then
-            Return False
-        End If
-
-        ' Determines if there are bad characters in the name.
-        For Each badChar As Char In noval1
-            If InStr(name, badChar) > 0 Then
-                Return False
-            End If
-        Next
-
-        ' The name passes basic validation.
-        Return True
-    End Function
+    
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'Me.Hide()
         ' Form2.Show()
@@ -83,8 +68,8 @@
         ElseIf TextBox3.TextLength = 0 Then
             Label5.Text = "write your PhoneNumber"
         ElseIf TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
-            If IsNumeric(TextBox3.Text) And IsValidFileNameOrPath2(TextBox3.Text) Then
-                If IsValidFileNameOrPath(TextBox1.Text) Then
+            If IsNumeric(TextBox3.Text) And IsValidFileNameOrPath(TextBox3.Text, noval1) Then
+                If IsValidFileNameOrPath(TextBox1.Text, noval) Then
                     Me.Hide()
                     RegForm2.Show()
                 Else

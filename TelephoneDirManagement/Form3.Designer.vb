@@ -40,21 +40,21 @@ Partial Class RegForm2
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(93, 394)
+        Me.Label7.Location = New System.Drawing.Point(102, 400)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(0, 24)
-        Me.Label7.TabIndex = 25
+        Me.Label7.TabIndex = 37
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(11, 9)
+        Me.Label6.Location = New System.Drawing.Point(20, 15)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(113, 31)
-        Me.Label6.TabIndex = 24
+        Me.Label6.TabIndex = 36
         Me.Label6.Text = "STEP 2"
         '
         'Button2
@@ -62,63 +62,64 @@ Partial Class RegForm2
         Me.Button2.BackColor = System.Drawing.Color.Lime
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.Location = New System.Drawing.Point(54, 446)
+        Me.Button2.Location = New System.Drawing.Point(63, 452)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(270, 48)
-        Me.Button2.TabIndex = 23
+        Me.Button2.TabIndex = 35
         Me.Button2.Text = "< PREVIOUS"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Others"})
-        Me.ComboBox1.Location = New System.Drawing.Point(285, 62)
+        Me.ComboBox1.Location = New System.Drawing.Point(294, 68)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(242, 37)
-        Me.ComboBox1.TabIndex = 22
+        Me.ComboBox1.TabIndex = 34
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(285, 246)
+        Me.TextBox4.Location = New System.Drawing.Point(294, 252)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(468, 93)
-        Me.TextBox4.TabIndex = 21
+        Me.TextBox4.TabIndex = 33
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(285, 195)
+        Me.TextBox3.Location = New System.Drawing.Point(294, 201)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(468, 35)
-        Me.TextBox3.TabIndex = 20
+        Me.TextBox3.TabIndex = 32
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(285, 125)
+        Me.TextBox2.Location = New System.Drawing.Point(294, 131)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(468, 35)
-        Me.TextBox2.TabIndex = 19
+        Me.TextBox2.TabIndex = 31
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Lime
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.Location = New System.Drawing.Point(620, 446)
+        Me.Button1.Location = New System.Drawing.Point(629, 452)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(172, 48)
-        Me.Button1.TabIndex = 18
+        Me.Button1.TabIndex = 30
         Me.Button1.Text = "NEXT >"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -126,44 +127,44 @@ Partial Class RegForm2
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(80, 246)
+        Me.Label4.Location = New System.Drawing.Point(89, 252)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(146, 36)
-        Me.Label4.TabIndex = 17
+        Me.Label4.TabIndex = 29
         Me.Label4.Text = "Other Info"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(69, 192)
+        Me.Label3.Location = New System.Drawing.Point(78, 198)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(166, 36)
-        Me.Label3.TabIndex = 16
+        Me.Label3.TabIndex = 28
         Me.Label3.Text = "Occupation"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(80, 122)
+        Me.Label2.Location = New System.Drawing.Point(89, 128)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(126, 36)
-        Me.Label2.TabIndex = 15
+        Me.Label2.TabIndex = 27
         Me.Label2.Text = "Address"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(91, 62)
+        Me.Label1.Location = New System.Drawing.Point(100, 68)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(114, 36)
-        Me.Label1.TabIndex = 14
+        Me.Label1.TabIndex = 26
         Me.Label1.Text = "Gender"
         '
         'RegForm2

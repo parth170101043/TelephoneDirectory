@@ -93,3 +93,8 @@ C:\Users\Dell\Desktop\MyTel1.4\TelephoneDirManagement\obj\Debug\telDir.Resources
 C:\Users\Dell\Desktop\MyTel1.4\TelephoneDirManagement\obj\Debug\telDir.UserForm1.resources
 C:\Users\Dell\Desktop\MyTel1.4\TelephoneDirManagement\obj\Debug\telDir.UserForm2.resources
 C:\Users\Dell\Desktop\MyTel1.4\TelephoneDirManagement\obj\Debug\telDir.vbproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.UserForm1.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.UserForm2.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.Form5.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.updatePassword.resources
+C:\Users\Dell\Desktop\myproject\TelephoneDirManagement\obj\Debug\telDir.myplans.resources

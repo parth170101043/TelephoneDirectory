@@ -23,6 +23,8 @@ Partial Class RegForm3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegForm3))
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -35,6 +37,26 @@ Partial Class RegForm3
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(343, 104)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 20)
+        Me.Label4.TabIndex = 30
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(497, 184)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
+        Me.CheckBox1.TabIndex = 29
+        Me.CheckBox1.Text = "Show Password"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Red
@@ -43,7 +65,7 @@ Partial Class RegForm3
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(209, 59)
-        Me.Button1.TabIndex = 17
+        Me.Button1.TabIndex = 28
         Me.Button1.Text = "Cancel Rgistration"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -55,7 +77,7 @@ Partial Class RegForm3
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(0, 29)
-        Me.Label5.TabIndex = 16
+        Me.Label5.TabIndex = 27
         '
         'PictureBox1
         '
@@ -65,7 +87,7 @@ Partial Class RegForm3
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(220, 53)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
         '
         'TextBox3
@@ -74,8 +96,9 @@ Partial Class RegForm3
         Me.TextBox3.Location = New System.Drawing.Point(273, 221)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox3.Size = New System.Drawing.Size(326, 35)
-        Me.TextBox3.TabIndex = 14
+        Me.TextBox3.TabIndex = 25
         '
         'TextBox2
         '
@@ -83,8 +106,9 @@ Partial Class RegForm3
         Me.TextBox2.Location = New System.Drawing.Point(273, 144)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(326, 35)
-        Me.TextBox2.TabIndex = 13
+        Me.TextBox2.TabIndex = 24
         '
         'TextBox1
         '
@@ -93,7 +117,7 @@ Partial Class RegForm3
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(326, 35)
-        Me.TextBox1.TabIndex = 12
+        Me.TextBox1.TabIndex = 23
         '
         'Label3
         '
@@ -103,7 +127,7 @@ Partial Class RegForm3
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 29)
-        Me.Label3.TabIndex = 11
+        Me.Label3.TabIndex = 22
         Me.Label3.Text = "Confirm"
         '
         'Label2
@@ -114,7 +138,7 @@ Partial Class RegForm3
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 29)
-        Me.Label2.TabIndex = 10
+        Me.Label2.TabIndex = 21
         Me.Label2.Text = "Password"
         '
         'Label1
@@ -124,15 +148,17 @@ Partial Class RegForm3
         Me.Label1.Location = New System.Drawing.Point(100, 71)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 29)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Usename"
+        Me.Label1.Size = New System.Drawing.Size(124, 29)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Username"
         '
         'RegForm3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(723, 479)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
@@ -149,6 +175,8 @@ Partial Class RegForm3
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox

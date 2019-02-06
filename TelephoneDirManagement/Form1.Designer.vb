@@ -42,8 +42,8 @@ Partial Class Form1
         Me.pic1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.r2 = New System.Windows.Forms.RadioButton()
+        Me.r1 = New System.Windows.Forms.RadioButton()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -270,28 +270,28 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 4
         Me.PictureBox3.TabStop = False
         '
-        'Button1
+        'r2
         '
-        Me.Button1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Button1.Location = New System.Drawing.Point(113, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(175, 40)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "ADMIN"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.r2.AutoSize = True
+        Me.r2.Location = New System.Drawing.Point(180, 40)
+        Me.r2.Name = "r2"
+        Me.r2.Size = New System.Drawing.Size(60, 18)
+        Me.r2.TabIndex = 10
+        Me.r2.Text = "Admin"
+        Me.r2.UseVisualStyleBackColor = True
         '
-        'Button2
+        'r1
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Button2.Location = New System.Drawing.Point(288, 27)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(186, 40)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "USER"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.r1.AutoSize = True
+        Me.r1.Checked = True
+        Me.r1.Location = New System.Drawing.Point(114, 40)
+        Me.r1.Name = "r1"
+        Me.r1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.r1.Size = New System.Drawing.Size(53, 18)
+        Me.r1.TabIndex = 9
+        Me.r1.TabStop = True
+        Me.r1.Text = "User"
+        Me.r1.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -300,8 +300,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
         Me.ClientSize = New System.Drawing.Size(579, 507)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.r2)
+        Me.Controls.Add(Me.r1)
         Me.Controls.Add(Me.Panel3)
         Me.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -325,6 +325,7 @@ Partial Class Form1
         CType(Me.pic1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pic1 As System.Windows.Forms.PictureBox
@@ -346,7 +347,7 @@ Partial Class Form1
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents r2 As System.Windows.Forms.RadioButton
+    Friend WithEvents r1 As System.Windows.Forms.RadioButton
 
 End Class

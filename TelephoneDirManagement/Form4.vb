@@ -1,5 +1,7 @@
-﻿Public Class RegForm3
+﻿Imports MySql.Data.MySqlClient
+Public Class RegForm3
     Dim y As Integer = 0
+    Dim uid As Integer = 0
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label3.Hide()
         TextBox3.Hide()
@@ -8,32 +10,35 @@
     End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-        ' If TextBox1.TextLength = 0 And TextBox2.TextLength = 0 And TextBox3.TextLength = 0 Then
-        ' Label5.Text = "write your Username,Password and Confirm Password"
-        ' ElseIf TextBox1.TextLength = 0 And TextBox2.TextLength = 0 Then
-        '  Label5.Text = "write your Username and Password"
-        '  TextBox3.Text = ""
-        ' ElseIf TextBox1.TextLength = 0 And TextBox3.TextLength = 0 Then
-        ' Label5.Text = "write your Username "
-        ' ElseIf TextBox2.TextLength = 0 And TextBox3.TextLength = 0 Then
-        ' Label5.Text = "write your Password "
-        ' ElseIf TextBox1.TextLength = 0 Then
-        ' Label5.Text = "write your Username "
-        ' ElseIf TextBox2.TextLength = 0 Then
-        ' Label5.Text = "write your Password"
-        ' TextBox3.Text = ""
-        ' ElseIf TextBox3.TextLength = 0 Then
-        ' Label5.Text = "Confirm Password"
-        ' ElseIf TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
-        ' If TextBox2.Text = TextBox3.Text Then
-        Me.Hide()
-        MessageBox.Show("Request sent To Admin")
-        Form1.Show()
-        ' Else
-        ' Label5.Text = "Password did't match "
-        'TextBox3.Text = ""
-        'End If
-        'End If
+        Dim MysqlConn As MySqlConnection
+        MysqlConn = New MySqlConnection
+        Dim MyCom As MySqlCommand
+        Dim reader As MySqlDataReader
+        Try
+            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.Open()
+            Dim query As String
+
+            'counting the number of entries in the table
+            query = "Select count(*) from user_data.user_table"
+            MyCom = New MySqlCommand(query, MysqlConn)
+            reader = MyCom.ExecuteReader()
+            reader.Read()
+            uid = reader("count(*)")
+            MysqlConn.Close()
+
+            'inserting into database
+            MysqlConn.Open()
+            query = "insert into user_data.user_table(UID,UserName,Password,Phone,email,City,Gender,Occupation,name,approved) values ('" & uid & "', '" & TextBox1.Text & "','" & TextBox2.Text & "', '" & RegForm1.TextBox3.Text & "', '" & RegForm1.TextBox2.Text & "', '" & RegForm2.TextBox2.Text & "','" & RegForm2.ComboBox1.Text & "', '" & RegForm2.TextBox3.Text & "','" & RegForm1.TextBox1.Text & "','" & 0 & "') "
+            MyCom = New MySqlCommand(query, MysqlConn)
+            reader = MyCom.ExecuteReader()
+            MessageBox.Show("request Sent to Admin")
+            Me.Hide()
+            Form1.Show()
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 
@@ -60,6 +65,7 @@
     End Sub
 
     Private Sub TextBox1_MouseLeave(sender As Object, e As EventArgs) Handles TextBox1.MouseLeave
+
         If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 Then
             Label3.Show()
             TextBox3.Show()
@@ -77,7 +83,12 @@
     Private Sub TextBox3_MouseLeave(sender As Object, e As EventArgs) Handles TextBox3.MouseLeave
         If TextBox3.TextLength > 0 Then
             If TextBox3.Text = TextBox2.Text Then
-                PictureBox1.Show()
+                If Label4.Text = "" Then
+                    PictureBox1.Show()
+                Else
+                    PictureBox1.Hide()
+
+                End If
                 Label5.Text = ""
             Else
                 Label5.Text = "Password did't match "
@@ -94,4 +105,50 @@
 
 
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Form1.Show()
+    End Sub
+
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = False Then
+            TextBox2.PasswordChar = "*"
+            TextBox3.PasswordChar = "*"
+        Else
+            TextBox2.PasswordChar = ""
+            TextBox3.PasswordChar = ""
+        End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+        Dim MysqlConn As MySqlConnection
+        MysqlConn = New MySqlConnection
+        Dim MyCom As MySqlCommand
+        Dim reader As MySqlDataReader
+        Try
+            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.Open()
+            Dim query As String
+            Dim count As Integer = 0
+            'counting the number of entries in the table
+            query = "Select * from user_data.user_table where userName = '" & TextBox1.Text & "'"
+            MyCom = New MySqlCommand(query, MysqlConn)
+            reader = MyCom.ExecuteReader()
+            While reader.Read
+                count = count + 1
+            End While
+            If count = 0 Then
+                Label4.Text = ""
+            Else
+                Label4.Text = "username already taken"
+                PictureBox1.Hide()
+            End If
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
 End Class

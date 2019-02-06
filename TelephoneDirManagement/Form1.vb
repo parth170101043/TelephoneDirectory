@@ -68,14 +68,25 @@ Public Class Form1
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        Dim reader As MySqlDataReader
+
         Try
             Label4.Text = ""
             MySqlConn.Open()
             pic1.Image = My.Resources.online
             Dim query As String
-            query = "Select * from user_data.user_table where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
-            mycom = New MySqlCommand(query, MySqlConn)
-            Dim reader As MySqlDataReader
+            If r1.Checked = True Then
+                query = "Select * from user_data.user_table where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
+                mycom = New MySqlCommand(query, MySqlConn)
+            ElseIf r2.Checked = True Then
+                query = "Select * from user_data.admin_data where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
+                mycom = New MySqlCommand(query, MySqlConn)
+            ElseIf r1.Checked = False And r2.Checked = False Then
+                MessageBox.Show("Select User or Admin")
+
+            End If
+
+
             reader = mycom.ExecuteReader()
             Dim count As Integer = 0
             While reader.Read
@@ -83,7 +94,7 @@ Public Class Form1
             End While
             If count = 1 Then
                 If verify_captcha(captcha, TextBox3.Text) = 1 Then
-                    MessageBox.Show("verified")
+
                     UserForm1.Show()
                     Me.Hide()
                 Else
@@ -103,21 +114,19 @@ Public Class Form1
         loadCaptcha()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Label1.Text = "ADMIN LOGIN"
-        PictureBox4.Hide()
-        PictureBox3.Left = 100
-    End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Label1.Text = "USER LOGIN"
-        PictureBox3.Left = 48
-        PictureBox4.Show()
-
-    End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         Me.Hide()
         RegForm1.Show()
+    End Sub
+
+    Private Sub r2_CheckedChanged(sender As Object, e As EventArgs) Handles r2.CheckedChanged
+        Label1.Text = "ADMIN LOGIN"
+    End Sub
+
+    Private Sub r1_CheckedChanged(sender As Object, e As EventArgs) Handles r1.CheckedChanged
+        Label1.Text = "USER LOGIN"
+
     End Sub
 End Class
