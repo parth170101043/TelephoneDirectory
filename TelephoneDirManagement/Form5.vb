@@ -177,4 +177,8 @@ Public Class Form5
     End Sub
 
 
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        updatePassword.Show()
+    End Sub
 End Class
