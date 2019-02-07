@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class UserForm1
-    Private Sub bus_Click(sender As Object, e As EventArgs) Handles bus.Click
+    Private Sub bus_Click(sender As Object, e As EventArgs)
         UserForm2.Show()
         Me.Hide()
     End Sub
@@ -10,11 +10,7 @@ Public Class UserForm1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
-        Form1.TextBox1.Text = ""
-        Form1.TextBox2.Text = ""
-        Form1.TextBox3.Text = ""
-        Form1.Show()
+        Application.Restart()
 
     End Sub
 

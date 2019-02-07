@@ -81,6 +81,7 @@ Partial Class myplans
         Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox11.Location = New System.Drawing.Point(198, 260)
         Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(221, 31)
         Me.TextBox11.TabIndex = 12
         '
@@ -89,6 +90,7 @@ Partial Class myplans
         Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.Location = New System.Drawing.Point(198, 211)
         Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(221, 31)
         Me.TextBox10.TabIndex = 11
         '
@@ -97,6 +99,7 @@ Partial Class myplans
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.Location = New System.Drawing.Point(198, 158)
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(221, 31)
         Me.TextBox6.TabIndex = 10
         '
@@ -105,6 +108,7 @@ Partial Class myplans
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(198, 109)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(221, 31)
         Me.TextBox3.TabIndex = 9
         '

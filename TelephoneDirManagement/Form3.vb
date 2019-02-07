@@ -1,5 +1,8 @@
 ﻿Public Class RegForm2
     Dim noval As String = "!~`#$%^&*()_+=/*<>.,?;:0123465789"
+
+    Shared Property MySqlConn As MySql.Data.MySqlClient.MySqlConnection
+
     Function IsValidFileNameOrPath(ByVal name As String) As Boolean
         ' Determines if the name is Nothing.
         If name Is Nothing Then

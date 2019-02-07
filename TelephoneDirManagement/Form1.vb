@@ -66,6 +66,7 @@ Public Class Form1
         End If
     End Sub
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim reader As MySqlDataReader
@@ -76,10 +77,10 @@ Public Class Form1
             pic1.Image = My.Resources.online
             Dim query As String
             If r1.Checked = True Then
-                query = "Select * from user_data.user_table where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
+                query = "Select count(*) from user_data.user_table where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
                 mycom = New MySqlCommand(query, MySqlConn)
             ElseIf r2.Checked = True Then
-                query = "Select * from user_data.admin_data where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
+                query = "Select count(*) from user_data.admin_data where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
                 mycom = New MySqlCommand(query, MySqlConn)
             ElseIf r1.Checked = False And r2.Checked = False Then
                 MessageBox.Show("Select User or Admin")
@@ -88,24 +89,27 @@ Public Class Form1
 
 
             reader = mycom.ExecuteReader()
-            Dim count As Integer = 0
-            While reader.Read
-                count = count + 1
-            End While
+            reader.Read()
+            Dim count As Integer
+            count = reader("count(*)")
             If count = 1 Then
                 If verify_captcha(captcha, TextBox3.Text) = 1 Then
-
                     UserForm1.Show()
                     Me.Hide()
                 Else
-                    MessageBox.Show("try again")
+                    MessageBox.Show("invalid captcha ")
                 End If
+
+            ElseIf count > 1 Then
+                MessageBox.Show("there was some problem please login after some time")
+
             Else
                 Label4.Text = "*incorrect username or password"
             End If
             MySqlConn.Close()
         Catch ex As MySqlException
             pic1.Image = My.Resources.offline
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 

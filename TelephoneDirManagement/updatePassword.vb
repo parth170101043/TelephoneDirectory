@@ -8,16 +8,25 @@ Public Class updatePassword
         Button1.Hide()
     End Sub
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
         If TextBox1.Text = Form1.TextBox2.Text Then
             TextBox2.Show()
-            Label2.Show()
             TextBox3.Show()
+            Label2.Show()
             Label3.Show()
         Else
             TextBox2.Hide()
             TextBox3.Hide()
             Label2.Hide()
             Label3.Hide()
+        End If
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text Then
+                Button1.Show()
+            Else
+                Button1.Hide()
+            End If
+        Else
             Button1.Hide()
         End If
     End Sub
@@ -30,7 +39,7 @@ Public Class updatePassword
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -42,26 +51,27 @@ Public Class updatePassword
             MysqlConn.Close()
             MessageBox.Show("PASSWORD UPDATED SUCCESSFULLY ! LOGIN AGAIN")
             Me.Hide()
-            Form1.Show()
+            Application.Restart()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-       
+
 
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
-        If TextBox2.Text = TextBox3.Text Then
-            Button1.Show()
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text Then
+                Button1.Show()
+            Else
+                Button1.Hide()
+            End If
         Else
             Button1.Hide()
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        Form5.Show()
-    End Sub
+
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = False Then
@@ -79,5 +89,17 @@ Public Class updatePassword
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
         Form1.Show()
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text Then
+                Button1.Show()
+            Else
+                Button1.Hide()
+            End If
+        Else
+            Button1.Hide()
+        End If
     End Sub
 End Class

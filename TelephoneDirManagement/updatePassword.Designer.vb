@@ -29,7 +29,6 @@ Partial Class updatePassword
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -104,16 +103,6 @@ Partial Class updatePassword
         Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(40, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 39)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "BACK"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -141,7 +130,6 @@ Partial Class updatePassword
         Me.ClientSize = New System.Drawing.Size(572, 268)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox3)
@@ -162,7 +150,6 @@ Partial Class updatePassword
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

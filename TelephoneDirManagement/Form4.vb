@@ -3,8 +3,6 @@ Public Class RegForm3
     Dim y As Integer = 0
     Dim uid As Integer = 0
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label3.Hide()
-        TextBox3.Hide()
         PictureBox1.Hide()
 
     End Sub
@@ -33,75 +31,15 @@ Public Class RegForm3
             MyCom = New MySqlCommand(query, MysqlConn)
             reader = MyCom.ExecuteReader()
             MessageBox.Show("request Sent to Admin")
-            Me.Hide()
-            Form1.Show()
+
+            'restart the application again
+            Application.Restart()
             MysqlConn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
     End Sub
-
-    Private Sub TextBox2_MouseLeave(sender As Object, e As EventArgs) Handles TextBox2.MouseLeave
-        If TextBox2.TextLength = 0 Then
-            TextBox3.Text = ""
-            Label3.Hide()
-            TextBox3.Hide()
-            PictureBox1.Hide()
-            Label5.Text = ""
-
-        ElseIf TextBox2.TextLength > 0 Then
-            If TextBox1.TextLength > 0 Then
-                Label3.Show()
-                TextBox3.Show()
-
-                Label5.Text = ""
-            End If
-
-
-        End If
-
-
-    End Sub
-
-    Private Sub TextBox1_MouseLeave(sender As Object, e As EventArgs) Handles TextBox1.MouseLeave
-
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 Then
-            Label3.Show()
-            TextBox3.Show()
-
-            Label5.Text = ""
-        Else
-            Label3.Hide()
-            TextBox3.Hide()
-            PictureBox1.Hide()
-
-            Label5.Text = ""
-        End If
-    End Sub
-
-    Private Sub TextBox3_MouseLeave(sender As Object, e As EventArgs) Handles TextBox3.MouseLeave
-        If TextBox3.TextLength > 0 Then
-            If TextBox3.Text = TextBox2.Text Then
-                If Label4.Text = "" Then
-                    PictureBox1.Show()
-                Else
-                    PictureBox1.Hide()
-
-                End If
-                Label5.Text = ""
-            Else
-                Label5.Text = "Password did't match "
-                TextBox3.Text = ""
-                PictureBox1.Hide()
-            End If
-        Else
-            PictureBox1.Hide()
-        End If
-
-    End Sub
-
-
 
 
 
@@ -150,5 +88,56 @@ Public Class RegForm3
             MessageBox.Show(ex.Message)
         End Try
 
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text And Label4.Text.Length = 0 Then
+                PictureBox1.Show()
+            Else
+                PictureBox1.Hide()
+            End If
+        Else
+            PictureBox1.Hide()
+        End If
+
     End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+        If TextBox2.TextLength = 0 Then
+            TextBox3.Hide()
+            PictureBox1.Hide()
+        Else
+            TextBox3.Show()
+        End If
+
+
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text And Label4.Text.Length = 0 Then
+                PictureBox1.Show()
+            Else
+                PictureBox1.Hide()
+            End If
+        Else
+            PictureBox1.Hide()
+        End If
+
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
+        If TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
+            If TextBox2.Text = TextBox3.Text And Label4.Text.Length = 0 Then
+                PictureBox1.Show()
+            Else
+                PictureBox1.Hide()
+            End If
+        Else
+            PictureBox1.Hide()
+        End If
+
+    End Sub
+
+    'Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    '   If Label4.Text.Length = 0 Then
+    '    PictureBox1.Hide()
+    ' End If
+    ' End Sub
 End Class

@@ -14,7 +14,7 @@ Public Class myplans
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -52,6 +52,6 @@ Public Class myplans
         Catch ex As Exception
 
         End Try
-       
+
     End Sub
 End Class

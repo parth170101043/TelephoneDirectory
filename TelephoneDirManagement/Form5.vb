@@ -71,6 +71,18 @@ Public Class Form5
             End If
             MysqlConn.Close()
 
+            MysqlConn.Open()
+            Dim SDA As New MySqlDataAdapter
+            Dim dbdataset As New DataTable
+            Dim bsource As New BindingSource
+            query = "select * from user_data.plans"
+            MyCom = New MySqlCommand(query, MysqlConn)
+            SDA.SelectCommand = MyCom
+            SDA.Fill(dbdataset)
+            bsource.DataSource = dbdataset
+            DataGridView1.DataSource = bsource
+            SDA.Update(dbdataset)
+            MysqlConn.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -102,31 +114,7 @@ Public Class Form5
         updatePassword.TextBox3.Text = ""
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-
-        Dim MysqlConn As MySqlConnection
-        MysqlConn = New MySqlConnection
-        Dim MyCom As MySqlCommand
-        Dim reader As MySqlDataReader
-        Try
-            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
-            MysqlConn.Open()
-            Dim query As String
-
-            'counting the number of entries in the table
-            query = "UPDATE user_data.user_table SET email= '" & TextBox7.Text & "',Occupation= '" & TextBox8.Text & "', Phone ='" & TextBox9.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
-            MyCom = New MySqlCommand(query, MysqlConn)
-            reader = MyCom.ExecuteReader()
-
-            MysqlConn.Close()
-            MessageBox.Show("Changes Saved")
-            Me.Hide()
-            Form1.Show()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
 
     Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs)
         If IsValidFileNameOrPath(TextBox8.Text, noval) Then
@@ -182,7 +170,49 @@ Public Class Form5
         updatePassword.Show()
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim MysqlConn As MySqlConnection
+        MysqlConn = New MySqlConnection
+        Dim MyCom As MySqlCommand
+        Dim reader As MySqlDataReader
+        Try
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
+            MysqlConn.Open()
+            Dim query As String
+
+            'counting the number of entries in the table
+            query = "UPDATE user_data.user_table SET email= '" & TextBox7.Text & "',Occupation= '" & TextBox8.Text & "', Phone ='" & TextBox9.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
+            MyCom = New MySqlCommand(query, MysqlConn)
+            reader = MyCom.ExecuteReader()
+
+            MysqlConn.Close()
+            MessageBox.Show("Changes Saved")
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Try
+            Dim index As Integer
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            Dim str As String
+            selectedRow = DataGridView1.Rows(index)
+            str = selectedRow.Cells(2).Value.ToString()
+            If str = "data" Then
+                TextBox3.Text = selectedRow.Cells(1).Value.ToString()
+                TextBox6.Text = selectedRow.Cells(4).Value.ToString()
+            Else
+                TextBox10.Text = selectedRow.Cells(1).Value.ToString()
+                TextBox11.Text = selectedRow.Cells(4).Value.ToString()
+            End If
+        Catch ex As Exception
+
+        End Try
+      
+    End Sub
+
 End Class
