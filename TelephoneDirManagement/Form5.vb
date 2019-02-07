@@ -8,7 +8,7 @@ Public Class Form5
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -110,7 +110,7 @@ Public Class Form5
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -153,7 +153,7 @@ Public Class Form5
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -180,5 +180,9 @@ Public Class Form5
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
         updatePassword.Show()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
 End Class

@@ -44,6 +44,8 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.r2 = New System.Windows.Forms.RadioButton()
         Me.r1 = New System.Windows.Forms.RadioButton()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -74,7 +76,7 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(44, 0)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(225, 32)
+        Me.TextBox1.Size = New System.Drawing.Size(225, 38)
         Me.TextBox1.TabIndex = 1
         '
         'PictureBox1
@@ -106,7 +108,7 @@ Partial Class Form1
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(222, 32)
+        Me.TextBox2.Size = New System.Drawing.Size(222, 38)
         Me.TextBox2.TabIndex = 1
         '
         'PictureBox2
@@ -159,7 +161,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(101, 43)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 13)
+        Me.Label4.Size = New System.Drawing.Size(0, 17)
         Me.Label4.TabIndex = 11
         '
         'Panel4
@@ -181,7 +183,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(1, 86)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 13)
+        Me.Label3.Size = New System.Drawing.Size(120, 17)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Type text here"
         '
@@ -190,7 +192,7 @@ Partial Class Form1
         Me.TextBox3.Location = New System.Drawing.Point(0, 104)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(228, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(228, 25)
         Me.TextBox3.TabIndex = 10
         '
         'Label2
@@ -200,7 +202,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(4, 10)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(64, 17)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Captcha"
         '
@@ -221,7 +223,7 @@ Partial Class Form1
         Me.CheckBox1.Location = New System.Drawing.Point(173, 153)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(117, 18)
+        Me.CheckBox1.Size = New System.Drawing.Size(134, 22)
         Me.CheckBox1.TabIndex = 7
         Me.CheckBox1.Text = "Show password"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -255,7 +257,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(98, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(175, 34)
+        Me.Label1.Size = New System.Drawing.Size(219, 43)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "USER LOGIN"
         '
@@ -275,7 +277,7 @@ Partial Class Form1
         Me.r2.AutoSize = True
         Me.r2.Location = New System.Drawing.Point(180, 40)
         Me.r2.Name = "r2"
-        Me.r2.Size = New System.Drawing.Size(60, 18)
+        Me.r2.Size = New System.Drawing.Size(69, 22)
         Me.r2.TabIndex = 10
         Me.r2.Text = "Admin"
         Me.r2.UseVisualStyleBackColor = True
@@ -287,19 +289,38 @@ Partial Class Form1
         Me.r1.Location = New System.Drawing.Point(114, 40)
         Me.r1.Name = "r1"
         Me.r1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.r1.Size = New System.Drawing.Size(53, 18)
+        Me.r1.Size = New System.Drawing.Size(61, 22)
         Me.r1.TabIndex = 9
         Me.r1.TabStop = True
         Me.r1.Text = "User"
         Me.r1.UseVisualStyleBackColor = True
         '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(355, 13)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 25)
+        Me.TextBox4.TabIndex = 11
+        Me.TextBox4.Text = "172.16.115.19"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(461, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
         Me.ClientSize = New System.Drawing.Size(579, 507)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.r2)
         Me.Controls.Add(Me.r1)
         Me.Controls.Add(Me.Panel3)
@@ -349,5 +370,7 @@ Partial Class Form1
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents r2 As System.Windows.Forms.RadioButton
     Friend WithEvents r1 As System.Windows.Forms.RadioButton
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

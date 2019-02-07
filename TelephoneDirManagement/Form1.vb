@@ -46,7 +46,7 @@ Public Class Form1
     End Function
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
         Try
             MySqlConn.Open()
             captcha = CInt(Math.Ceiling(Rnd() * number))
@@ -67,7 +67,7 @@ Public Class Form1
     End Sub
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim reader As MySqlDataReader
 
         Try
@@ -128,5 +128,39 @@ Public Class Form1
     Private Sub r1_CheckedChanged(sender As Object, e As EventArgs) Handles r1.CheckedChanged
         Label1.Text = "USER LOGIN"
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    '  Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+    ' MySqlConn = New MySqlConnection
+    ' MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
+    'Try
+    '    MySqlConn.Open()
+    '  captcha = CInt(Math.Ceiling(Rnd() * number))
+    '  captcha = captcha Mod number + 1
+    '  loadCaptcha()
+    ' pic1.Image = My.Resources.online
+    ' MySqlConn.Close()
+    '  Catch ex As MySqlException
+    ' pic1.Image = My.Resources.offline
+    '   End Try
+    ' End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MySqlConn = New MySqlConnection
+        MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
+        Try
+            MySqlConn.Open()
+            captcha = CInt(Math.Ceiling(Rnd() * number))
+            captcha = captcha Mod number + 1
+            loadCaptcha()
+            pic1.Image = My.Resources.online
+            MySqlConn.Close()
+        Catch ex As MySqlException
+            pic1.Image = My.Resources.offline
+        End Try
     End Sub
 End Class

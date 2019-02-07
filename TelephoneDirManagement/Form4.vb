@@ -15,7 +15,7 @@ Public Class RegForm3
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
 
@@ -128,7 +128,7 @@ Public Class RegForm3
         Dim MyCom As MySqlCommand
         Dim reader As MySqlDataReader
         Try
-            MysqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
             Dim count As Integer = 0
