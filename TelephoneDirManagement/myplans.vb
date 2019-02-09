@@ -24,10 +24,10 @@ Public Class myplans
             reader = MyCom.ExecuteReader()
             reader.Read()
 
-            If IsDBNull(reader("DataISP")) Then
+            If IsDBNull(reader("ISP")) Then
                 TextBox3.Text = ""
             Else
-                TextBox3.Text = reader("DataISP")
+                TextBox3.Text = reader("ISP")
             End If
 
 
@@ -38,10 +38,10 @@ Public Class myplans
             End If
 
 
-            If IsDBNull(reader("CallISP")) Then
+            If IsDBNull(reader("ISP")) Then
                 TextBox10.Text = ""
             Else
-                TextBox10.Text = reader("CallISP")
+                TextBox10.Text = reader("ISP")
             End If
             If IsDBNull(reader("Price")) Then
                 TextBox11.Text = ""

@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="browseplan.Designer.vb">
+      <DependentUpon>browseplan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="browseplan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.Designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     <Compile Include="myplans.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="recharge.Designer.vb">
+      <DependentUpon>recharge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recharge.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="updatePassword.Designer.vb">
       <DependentUpon>updatePassword.vb</DependentUpon>
     </Compile>
@@ -149,6 +167,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="browseplan.resx">
+      <DependentUpon>browseplan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="myplans.resx">
       <DependentUpon>myplans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recharge.resx">
+      <DependentUpon>recharge.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updatePassword.resx">
       <DependentUpon>updatePassword.vb</DependentUpon>
@@ -256,6 +283,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\business1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B1144733583.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

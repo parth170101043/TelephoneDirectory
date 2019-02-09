@@ -125,7 +125,6 @@ C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.pdb
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\bin\Debug\telDir.exe
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\bin\Debug\telDir.pdb
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\bin\Debug\telDir.xml
-C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.vbprojResolveAssemblyReference.cache
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.Form1.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.RegForm1.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.RegForm2.resources
@@ -137,3 +136,6 @@ C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.update
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.UserForm1.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.UserForm2.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.vbproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.browseplan.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.recharge.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.confirm.resources

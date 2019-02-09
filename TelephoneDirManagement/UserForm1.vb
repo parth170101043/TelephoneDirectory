@@ -6,7 +6,28 @@ Public Class UserForm1
     End Sub
 
     Private Sub UserForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.BackColor = Color.Transparent
         Label1.Text = Label1.Text + Form1.TextBox1.Text
+        Dim MysqlConn As MySqlConnection
+        MysqlConn = New MySqlConnection
+        Dim MyCom As MySqlCommand
+        Dim reader As MySqlDataReader
+        Try
+            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
+            MysqlConn.Open()
+            Dim query As String
+
+
+            query = "Select * from user_data.user_table where userName='" & Form1.TextBox1.Text & "'"
+            MyCom = New MySqlCommand(query, MysqlConn)
+            reader = MyCom.ExecuteReader()
+            reader.Read()
+            Label2.Text = Label2.Text + CStr(reader("Balance"))
+            Label4.Text = reader("ISP")
+            MysqlConn.Close()
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -69,5 +90,21 @@ Public Class UserForm1
 
         End Try
         myplans.Show()
+    End Sub
+
+
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        browseplan.Show()
+    End Sub
+
+  
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        recharge.Label2.Text = "Hi, " + Form1.TextBox1.Text
+        recharge.Label3.Text = "Current " + Label2.Text
+        recharge.Show()
     End Sub
 End Class

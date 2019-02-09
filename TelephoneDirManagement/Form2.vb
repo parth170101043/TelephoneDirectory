@@ -6,7 +6,7 @@
     Dim noval As String = "!~`#$%^&*()_-+=/*<>.,?;:0123465789"
     Dim noval1 As String = ".+-="
     Private Sub TextBox1_MouseLeave(sender As Object, e As EventArgs) Handles TextBox1.MouseLeave
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 Then
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And ComboBox1.Text.Length > 0 Then
             Button1.BackColor = Color.LimeGreen
             Button1.ForeColor = Color.White
         Else
@@ -15,7 +15,7 @@
         End If
     End Sub
     Private Sub TextBox2_MouseLeave(sender As Object, e As EventArgs) Handles TextBox2.MouseLeave
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 Then
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And ComboBox1.Text.Length > 0 Then
             Button1.BackColor = Color.LimeGreen
             Button1.ForeColor = Color.White
         Else
@@ -24,7 +24,7 @@
         End If
     End Sub
     Private Sub TextBox3_MouseLeave(sender As Object, e As EventArgs) Handles TextBox3.MouseLeave
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 Then
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And ComboBox1.Text.Length > 0 Then
             Button1.BackColor = Color.LimeGreen
             Button1.ForeColor = Color.White
         Else
@@ -32,6 +32,7 @@
             Button1.ForeColor = Color.WhiteSmoke
         End If
     End Sub
+
     Function IsValidFileNameOrPath(ByVal name As String, ByVal str1 As String) As Boolean '''''for name
         ' Determines if the name is Nothing.
         If name Is Nothing Then
@@ -67,6 +68,8 @@
             Label5.Text = "write your Email"
         ElseIf TextBox3.TextLength = 0 Then
             Label5.Text = "write your PhoneNumber"
+        ElseIf ComboBox1.Text.Length = 0 Then
+            Label5.Text = "select your service provider"
         ElseIf TextBox1.TextLength <> 0 And TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 Then
             If IsNumeric(TextBox3.Text) And IsValidFileNameOrPath(TextBox3.Text, noval1) Then
                 If IsValidFileNameOrPath(TextBox1.Text, noval) Then
@@ -84,4 +87,8 @@
     End Sub
 
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Application.Restart()
+
+    End Sub
 End Class

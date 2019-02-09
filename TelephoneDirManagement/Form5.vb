@@ -21,11 +21,7 @@ Public Class Form5
             TextBox2.Text = reader("UserName")
 
 
-            If IsDBNull(reader("DataISP")) Then
-                TextBox3.Text = ""
-            Else
-                TextBox3.Text = reader("DataISP")
-            End If
+           
 
 
             If IsDBNull(reader("City")) Or reader("city") = "" Then
@@ -39,11 +35,6 @@ Public Class Form5
                 TextBox5.Text = "(No User Data Available)"
             Else
                 TextBox5.Text = reader("Gender")
-            End If
-            If IsDBNull(reader("DataPlan")) Then
-                TextBox6.Text = "(No Current Plans)"
-            Else
-                TextBox6.Text = reader("DataPlan")
             End If
 
 
@@ -59,30 +50,10 @@ Public Class Form5
             ' TextBox10.Text = reader("CallISP")
             '   TextBox11.Text = reader("Price")
 
-            If IsDBNull(reader("CallISP")) Then
-                TextBox10.Text = ""
-            Else
-                TextBox10.Text = reader("CallISP")
-            End If
-            If IsDBNull(reader("Price")) Then
-                TextBox11.Text = ""
-            Else
-                TextBox11.Text = reader("Price")
-            End If
+
+
             MysqlConn.Close()
 
-            MysqlConn.Open()
-            Dim SDA As New MySqlDataAdapter
-            Dim dbdataset As New DataTable
-            Dim bsource As New BindingSource
-            query = "select * from user_data.plans"
-            MyCom = New MySqlCommand(query, MysqlConn)
-            SDA.SelectCommand = MyCom
-            SDA.Fill(dbdataset)
-            bsource.DataSource = dbdataset
-            DataGridView1.DataSource = bsource
-            SDA.Update(dbdataset)
-            MysqlConn.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -134,30 +105,6 @@ Public Class Form5
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-        Dim MysqlConn As MySqlConnection
-        MysqlConn = New MySqlConnection
-        Dim MyCom As MySqlCommand
-        Dim reader As MySqlDataReader
-        Try
-            MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
-            MysqlConn.Open()
-            Dim query As String
-
-            'counting the number of entries in the table
-            query = "UPDATE user_data.user_table SET DataISP = '" & TextBox3.Text & "',DataPlan = '" & TextBox6.Text & "', CallISP ='" & TextBox10.Text & "' , Price = '" & TextBox11.Text & "' where userName ='" & Form1.TextBox1.Text & "' "
-            MyCom = New MySqlCommand(query, MysqlConn)
-            reader = MyCom.ExecuteReader()
-
-            MysqlConn.Close()
-            MessageBox.Show("Changes Saved")
-            Me.Hide()
-            UserForm1.Show()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
@@ -194,25 +141,6 @@ Public Class Form5
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        Try
-            Dim index As Integer
-            index = e.RowIndex
-            Dim selectedRow As DataGridViewRow
-            Dim str As String
-            selectedRow = DataGridView1.Rows(index)
-            str = selectedRow.Cells(2).Value.ToString()
-            If str = "data" Then
-                TextBox3.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox6.Text = selectedRow.Cells(4).Value.ToString()
-            Else
-                TextBox10.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox11.Text = selectedRow.Cells(4).Value.ToString()
-            End If
-        Catch ex As Exception
 
-        End Try
-      
-    End Sub
 
 End Class

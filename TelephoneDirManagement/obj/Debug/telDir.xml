@@ -15,6 +15,10 @@ telDir
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:telDir.My.Resources.Resources.B1144733583">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:telDir.My.Resources.Resources.business1">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -72,6 +76,18 @@ telDir
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:telDir.My.Resources.Resources.signup">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:telDir.My.Resources.Resources.telephone">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:telDir.My.Resources.Resources.telephone1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:telDir.My.Resources.Resources.telephone2">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

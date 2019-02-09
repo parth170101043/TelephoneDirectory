@@ -27,7 +27,7 @@ Public Class RegForm3
 
             'inserting into database
             MysqlConn.Open()
-            query = "insert into user_data.user_table(UID,UserName,Password,Phone,email,City,Gender,Occupation,name,approved) values ('" & uid & "', '" & TextBox1.Text & "','" & TextBox2.Text & "', '" & RegForm1.TextBox3.Text & "', '" & RegForm1.TextBox2.Text & "', '" & RegForm2.TextBox2.Text & "','" & RegForm2.ComboBox1.Text & "', '" & RegForm2.TextBox3.Text & "','" & RegForm1.TextBox1.Text & "','" & 0 & "') "
+            query = "insert into user_data.user_table(UID,UserName,Password,Phone,email,City,Gender,Occupation,name,approved,ISP,balance) values ('" & uid & "', '" & TextBox1.Text & "','" & TextBox2.Text & "', '" & RegForm1.TextBox3.Text & "', '" & RegForm1.TextBox2.Text & "', '" & RegForm2.TextBox2.Text & "','" & RegForm2.ComboBox1.Text & "', '" & RegForm2.TextBox3.Text & "','" & RegForm1.TextBox1.Text & "','" & 0 & "','" & RegForm1.ComboBox1.Text & "',50) "
             MyCom = New MySqlCommand(query, MysqlConn)
             reader = MyCom.ExecuteReader()
             MessageBox.Show("request Sent to Admin")

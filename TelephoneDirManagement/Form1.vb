@@ -2,8 +2,10 @@
 Public Class Form1
     Dim MySqlConn As MySqlConnection
     Dim mycom As MySqlCommand
+    Dim newCom As MySqlCommand
     Dim captcha As Integer
     Dim number As Integer = 7
+    Dim approved As Integer
     Sub loadCaptcha()
         If captcha = 1 Then
             pic5.Image = My.Resources.img2
@@ -70,15 +72,20 @@ Public Class Form1
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server='" & TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim reader As MySqlDataReader
+        Dim reader2 As MySqlDataReader
 
         Try
             Label4.Text = ""
             MySqlConn.Open()
             pic1.Image = My.Resources.online
             Dim query As String
+            Dim query1 As String
             If r1.Checked = True Then
+                query1 = "select * from user_data.user_table where userName =  '" & TextBox1.Text & "'"
                 query = "Select count(*) from user_data.user_table where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
                 mycom = New MySqlCommand(query, MySqlConn)
+                newCom = New MySqlCommand(query1, MySqlConn)
+
             ElseIf r2.Checked = True Then
                 query = "Select count(*) from user_data.admin_data where UserName = '" & TextBox1.Text & "' and Password= '" & TextBox2.Text & "'"
                 mycom = New MySqlCommand(query, MySqlConn)
@@ -92,10 +99,18 @@ Public Class Form1
             reader.Read()
             Dim count As Integer
             count = reader("count(*)")
-            If count = 1 Then
+            reader.Close()
+            If count = 1 And r1.Checked = True Then
                 If verify_captcha(captcha, TextBox3.Text) = 1 Then
-                    UserForm1.Show()
-                    Me.Hide()
+                    reader2 = newCom.ExecuteReader()
+                    reader2.Read()
+                    If reader2("approved") = 1 Then
+                        UserForm1.Show()
+                        Me.Hide()
+                    Else
+                        MessageBox.Show("Waiting for approval login after some time")
+                    End If
+                   
                 Else
                     MessageBox.Show("invalid captcha ")
                 End If
