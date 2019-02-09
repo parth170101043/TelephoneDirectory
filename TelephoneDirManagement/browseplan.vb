@@ -52,11 +52,10 @@ Public Class browseplan
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        For Each Control As Control In Me.Controls
-            If TypeOf Control Is TextBox Then
-                Control.Text = ""
-            End If
-        Next
+        TextBox3.Text = ""
+        TextBox6.Text = ""
+        TextBox10.Text = ""
+        TextBox11.Text = ""
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)

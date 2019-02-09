@@ -10,6 +10,7 @@ Public Class confirm
             Dim price As Integer
             Dim reader As MySqlDataReader
             Dim transaction As Integer = 0
+            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
             Try
                 MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
                 MysqlConn.Open()
@@ -32,6 +33,7 @@ Public Class confirm
                     transaction = 1
                 End If
                 MysqlConn.Close()
+ 
                 MysqlConn.Open()
 
                 'updating the balance and dataplan
@@ -44,6 +46,18 @@ Public Class confirm
 
                 End If
                 MysqlConn.Close()
+
+                'we need to update the history
+                If transaction = 1 Then
+                    MysqlConn.Open()
+
+                    'updating the balance and dataplan
+                    query = "insert into user_data.history (UID, Amount,Date) values ('" & UserForm1.Label7.Text & "', '" & price & "','" & todaysdate & "' );"
+                    MyCom = New MySqlCommand(query, MysqlConn)
+                    reader = MyCom.ExecuteReader()
+                    MysqlConn.Close()
+                End If
+               
             Catch ex As Exception
             End Try
         ElseIf browseplan.Label1.Text = "c" Then
@@ -54,6 +68,7 @@ Public Class confirm
             Dim price As Integer
             Dim reader As MySqlDataReader
             Dim transaction As Integer = 0
+            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
             Try
                 MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
                 MysqlConn.Open()
@@ -88,6 +103,17 @@ Public Class confirm
 
                 End If
                 MysqlConn.Close()
+
+                'we need to update the history
+                If transaction = 1 Then
+                    MysqlConn.Open()
+
+                    'updating the balance and dataplan
+                    query = "insert into user_data.history (UID, Amount,Date) values ('" & UserForm1.Label7.Text & "', '" & price & "','" & todaysdate & "' );"
+                    MyCom = New MySqlCommand(query, MysqlConn)
+                    reader = MyCom.ExecuteReader()
+                    MysqlConn.Close()
+                End If
             Catch ex As Exception
             End Try
         Else

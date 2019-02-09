@@ -24,6 +24,7 @@ Public Class UserForm1
             reader.Read()
             Label2.Text = Label2.Text + CStr(reader("Balance"))
             Label4.Text = reader("ISP")
+            Label7.Text = reader("UID")
             MysqlConn.Close()
         Catch ex As Exception
         End Try
@@ -106,5 +107,10 @@ Public Class UserForm1
         recharge.Label2.Text = "Hi, " + Form1.TextBox1.Text
         recharge.Label3.Text = "Current " + Label2.Text
         recharge.Show()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        history.Show()
     End Sub
 End Class

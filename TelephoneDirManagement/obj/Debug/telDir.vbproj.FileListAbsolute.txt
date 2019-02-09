@@ -139,3 +139,4 @@ C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.vbproj
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.browseplan.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.recharge.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.confirm.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.history.resources

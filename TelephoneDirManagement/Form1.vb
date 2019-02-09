@@ -182,4 +182,8 @@ Public Class Form1
             pic1.Image = My.Resources.offline
         End Try
     End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+
+    End Sub
 End Class
