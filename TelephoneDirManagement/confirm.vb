@@ -10,7 +10,7 @@ Public Class confirm
             Dim price As Integer
             Dim reader As MySqlDataReader
             Dim transaction As Integer = 0
-            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+            Dim todaysdate As String = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")
             Try
                 MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
                 MysqlConn.Open()
@@ -37,7 +37,7 @@ Public Class confirm
                 MysqlConn.Open()
 
                 'updating the balance and dataplan
-                query = "UPDATE user_data.user_table SET balance = '" & bal & "', DataPlan='" & price & "' where userName ='" & Form1.TextBox1.Text & "';"
+                query = "UPDATE user_data.user_table SET balance = '" & bal & "', DataPlan='" & price & "',PlanID_d = '" & browseplan.Label2.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
                 MyCom = New MySqlCommand(query, MysqlConn)
                 reader = MyCom.ExecuteReader()
                 If (transaction = 1) Then
@@ -68,7 +68,7 @@ Public Class confirm
             Dim price As Integer
             Dim reader As MySqlDataReader
             Dim transaction As Integer = 0
-            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+            Dim todaysdate As String = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")
             Try
                 MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
                 MysqlConn.Open()
@@ -94,7 +94,7 @@ Public Class confirm
                 MysqlConn.Open()
 
                 'updating the balance and dataplan
-                query = "UPDATE user_data.user_table SET balance = '" & bal & "', Price='" & price & "' where userName ='" & Form1.TextBox1.Text & "';"
+                query = "UPDATE user_data.user_table SET balance = '" & bal & "', Price='" & price & "',PlanID_t = '" & browseplan.Label4.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
                 MyCom = New MySqlCommand(query, MysqlConn)
                 reader = MyCom.ExecuteReader()
                 If (transaction = 1) Then

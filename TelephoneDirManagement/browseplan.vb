@@ -26,23 +26,7 @@ Public Class browseplan
       
     End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        Try
-            Dim index As Integer
-            index = e.RowIndex
-            Dim selectedRow As DataGridViewRow
-            Dim str As String
-            selectedRow = DataGridView1.Rows(index)
-            str = selectedRow.Cells(2).Value.ToString()
-            If str = "data" Then
-                TextBox3.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox6.Text = selectedRow.Cells(4).Value.ToString()
-            Else
-                TextBox10.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox11.Text = selectedRow.Cells(4).Value.ToString()
-            End If
-        Catch ex As Exception
-
-        End Try
+       
 
     End Sub
 
@@ -68,13 +52,45 @@ Public Class browseplan
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         Label1.Text = "d"
-        Me.Hide()
-        confirm.Show()
+        If (TextBox6.TextLength = 0) Then
+            MessageBox.Show("please select a plan to purchase")
+        Else
+            Me.Hide()
+            confirm.Show()
+        End If
+
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         Label1.Text = "c"
-        Me.Hide()
-        confirm.Show()
+        If (TextBox11.TextLength = 0) Then
+            MessageBox.Show("please select a plan to purchase")
+        Else
+            Me.Hide()
+            confirm.Show()
+        End If
+    End Sub
+
+
+    Private Sub DataGridView1_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.RowEnter
+        Try
+            Dim index As Integer
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            Dim str As String
+            selectedRow = DataGridView1.Rows(index)
+            str = selectedRow.Cells(2).Value.ToString()
+            If str = "data" Then
+                TextBox3.Text = selectedRow.Cells(1).Value.ToString()
+                TextBox6.Text = selectedRow.Cells(4).Value.ToString()
+                Label2.Text = selectedRow.Cells(0).Value.ToString()
+            Else
+                TextBox10.Text = selectedRow.Cells(1).Value.ToString()
+                TextBox11.Text = selectedRow.Cells(4).Value.ToString()
+                Label4.Text = selectedRow.Cells(0).Value.ToString()
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

@@ -78,7 +78,6 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(225, 32)
         Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "Sparsh123456"
         '
         'PictureBox1
         '
@@ -111,7 +110,6 @@ Partial Class Form1
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(222, 32)
         Me.TextBox2.TabIndex = 1
-        Me.TextBox2.Text = "sparsh"
         '
         'PictureBox2
         '
@@ -196,7 +194,6 @@ Partial Class Form1
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(228, 22)
         Me.TextBox3.TabIndex = 10
-        Me.TextBox3.Text = "Google"
         '
         'Label2
         '
@@ -304,7 +301,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 22)
         Me.TextBox4.TabIndex = 11
-        Me.TextBox4.Text = "10.12.03.35"
+        Me.TextBox4.Text = "172.16.115.19"
         '
         'Button1
         '

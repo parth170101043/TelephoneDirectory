@@ -11,6 +11,8 @@ Public Class UserForm1
         Dim MysqlConn As MySqlConnection
         MysqlConn = New MySqlConnection
         Dim MyCom As MySqlCommand
+        Dim planid_d As Integer = 0
+        Dim planid_t As Integer = 0
         Dim reader As MySqlDataReader
         Try
             MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
@@ -25,8 +27,45 @@ Public Class UserForm1
             Label2.Text = Label2.Text + CStr(reader("Balance"))
             Label4.Text = reader("ISP")
             Label7.Text = reader("UID")
+            If IsDBNull(reader("planid_d")) = False Then
+                planid_d = reader("planid_d")
+            Else
+                planid_d = -1
+            End If
+            If IsDBNull(reader("planid_t")) = False Then
+                planid_t = reader("planid_t")
+            Else
+                planid_t = -1
+            End If
+
+
+
+            Console.Write(CStr(planid_d))
+            Console.Write(CStr(planid_t))
+
+            MysqlConn.Close()
+            MysqlConn.Open()
+            If planid_d >= 0 Then
+                query = "select * from user_data.plans where ID = '" & planid_d & "'"
+                MyCom = New MySqlCommand(query, MysqlConn)
+                reader = MyCom.ExecuteReader()
+                reader.Read()
+                TextBox1.Text = reader("details")
+                reader.Close()
+            End If
+
+            If planid_t >= 0 Then
+                query = "select * from user_data.plans where ID = '" & planid_t & "'"
+                MyCom = New MySqlCommand(query, MysqlConn)
+                reader = MyCom.ExecuteReader()
+                reader.Read()
+                TextBox2.Text = reader("details")
+                reader.Close()
+            End If
+
             MysqlConn.Close()
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
 
     End Sub
@@ -113,4 +152,6 @@ Public Class UserForm1
         Me.Hide()
         history.Show()
     End Sub
+
+   
 End Class

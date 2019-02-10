@@ -39,6 +39,10 @@ telDir
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:telDir.My.Resources.Resources.images">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:telDir.My.Resources.Resources.img2">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
