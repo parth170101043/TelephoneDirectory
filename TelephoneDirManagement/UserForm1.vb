@@ -1,11 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class UserForm1
+    Dim Red, Blue, Green, Yellow As String
     Private Sub bus_Click(sender As Object, e As EventArgs)
         UserForm2.Show()
         Me.Hide()
     End Sub
 
     Private Sub UserForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Enabled = True
+        Timer1.Start()
         Panel1.BackColor = Color.Transparent
         Label1.Text = Label1.Text + Form1.TextBox1.Text
         Dim MysqlConn As MySqlConnection
@@ -40,8 +43,8 @@ Public Class UserForm1
 
 
 
-            Console.Write(CStr(planid_d))
-            Console.Write(CStr(planid_t))
+            ' Console.Write(CStr(planid_d))
+            '  Console.Write(CStr(planid_t))
 
             MysqlConn.Close()
             MysqlConn.Open()
@@ -140,7 +143,7 @@ Public Class UserForm1
         browseplan.Show()
     End Sub
 
-  
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
         recharge.Label2.Text = "Hi, " + Form1.TextBox1.Text
@@ -153,5 +156,17 @@ Public Class UserForm1
         history.Show()
     End Sub
 
-   
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        contact_us.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Red = Int(Rnd() * 255)
+        Blue = Int(Rnd() * 255)
+        Yellow = Int(Rnd() * 255)
+        Green = Int(Rnd() * 255)
+
+        Button2.BackColor = Color.FromArgb(Blue, Red, Green, Yellow)
+    End Sub
 End Class

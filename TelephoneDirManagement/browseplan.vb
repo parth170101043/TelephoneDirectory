@@ -1,7 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class browseplan
-
+    Dim Red, Blue, Green, Yellow As String
     Private Sub browseplan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Start()
         Try
             Dim MysqlConn As MySqlConnection
             MysqlConn = New MySqlConnection
@@ -92,5 +93,14 @@ Public Class browseplan
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Red = Int(Rnd() * 255)
+        Blue = Int(Rnd() * 255)
+        Yellow = Int(Rnd() * 255)
+        Green = Int(Rnd() * 255)
+        Button4.BackColor = Color.FromArgb(Red, Blue, Green, Yellow)
+        Button2.BackColor = Color.FromArgb(Red, Blue, Green, Yellow)
     End Sub
 End Class

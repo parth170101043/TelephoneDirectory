@@ -22,6 +22,7 @@ Partial Class UserForm1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -41,6 +42,8 @@ Partial Class UserForm1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -61,7 +64,7 @@ Partial Class UserForm1
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(504, 0)
+        Me.Button3.Location = New System.Drawing.Point(427, -2)
         Me.Button3.Margin = New System.Windows.Forms.Padding(0)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(83, 37)
@@ -72,7 +75,7 @@ Partial Class UserForm1
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(388, 2)
+        Me.Button6.Location = New System.Drawing.Point(311, 1)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(113, 33)
         Me.Button6.TabIndex = 12
@@ -82,10 +85,10 @@ Partial Class UserForm1
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(286, 1)
+        Me.Button7.Location = New System.Drawing.Point(213, 1)
         Me.Button7.Margin = New System.Windows.Forms.Padding(0)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(99, 35)
+        Me.Button7.Size = New System.Drawing.Size(95, 35)
         Me.Button7.TabIndex = 13
         Me.Button7.Text = "My Plans"
         Me.Button7.UseVisualStyleBackColor = True
@@ -93,7 +96,7 @@ Partial Class UserForm1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(154, 1)
+        Me.Button1.Location = New System.Drawing.Point(81, 1)
         Me.Button1.Margin = New System.Windows.Forms.Padding(0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(132, 36)
@@ -109,17 +112,17 @@ Partial Class UserForm1
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button7)
-        Me.Panel1.Location = New System.Drawing.Point(12, 36)
+        Me.Panel1.Location = New System.Drawing.Point(68, 46)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(587, 37)
+        Me.Panel1.Size = New System.Drawing.Size(512, 37)
         Me.Panel1.TabIndex = 15
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(53, 1)
+        Me.Button4.Location = New System.Drawing.Point(3, 0)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(98, 34)
+        Me.Button4.Size = New System.Drawing.Size(75, 34)
         Me.Button4.TabIndex = 15
         Me.Button4.Text = "History"
         Me.Button4.UseVisualStyleBackColor = True
@@ -151,7 +154,7 @@ Partial Class UserForm1
         Me.Panel2.BackgroundImage = Global.telDir.My.Resources.Resources.telephone
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(16, 139)
+        Me.Panel2.Location = New System.Drawing.Point(58, 131)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(151, 99)
         Me.Panel2.TabIndex = 17
@@ -161,7 +164,7 @@ Partial Class UserForm1
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 114)
+        Me.Label6.Location = New System.Drawing.Point(54, 99)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(150, 22)
         Me.Label6.TabIndex = 21
@@ -185,16 +188,16 @@ Partial Class UserForm1
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.TextBox2)
         Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(277, 124)
+        Me.Panel3.Location = New System.Drawing.Point(293, 99)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(287, 196)
+        Me.Panel3.Size = New System.Drawing.Size(287, 175)
         Me.Panel3.TabIndex = 23
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(99, 112)
+        Me.Label9.Location = New System.Drawing.Point(109, 97)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(99, 19)
         Me.Label9.TabIndex = 27
@@ -204,7 +207,7 @@ Partial Class UserForm1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(99, 15)
+        Me.Label8.Location = New System.Drawing.Point(109, 3)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(90, 19)
         Me.Label8.TabIndex = 26
@@ -213,7 +216,7 @@ Partial Class UserForm1
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(21, 44)
+        Me.TextBox2.Location = New System.Drawing.Point(30, 40)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -223,7 +226,7 @@ Partial Class UserForm1
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(21, 134)
+        Me.TextBox1.Location = New System.Drawing.Point(30, 119)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -251,6 +254,22 @@ Partial Class UserForm1
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "MY ISP : "
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Font = New System.Drawing.Font("Consolas", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Red
+        Me.Button5.Location = New System.Drawing.Point(82, 312)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(474, 42)
+        Me.Button5.TabIndex = 16
+        Me.Button5.Text = "CONTACT US"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 500
+        '
         'UserForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -259,6 +278,7 @@ Partial Class UserForm1
         Me.BackgroundImage = Global.telDir.My.Resources.Resources.telephone2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(636, 366)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label7)
@@ -300,4 +320,6 @@ Partial Class UserForm1
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

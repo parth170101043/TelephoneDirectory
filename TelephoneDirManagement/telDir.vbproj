@@ -84,6 +84,12 @@
     <Compile Include="confirm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="contact_us.Designer.vb">
+      <DependentUpon>contact_us.vb</DependentUpon>
+    </Compile>
+    <Compile Include="contact_us.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="confirm.resx">
       <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contact_us.resx">
+      <DependentUpon>contact_us.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

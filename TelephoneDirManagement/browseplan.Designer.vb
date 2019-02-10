@@ -22,6 +22,7 @@ Partial Class browseplan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -40,6 +41,7 @@ Partial Class browseplan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,6 +93,7 @@ Partial Class browseplan
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.Lime
+        Me.Button4.Font = New System.Drawing.Font("Consolas", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Button4.Location = New System.Drawing.Point(546, 130)
         Me.Button4.Name = "Button4"
@@ -102,6 +105,7 @@ Partial Class browseplan
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Lime
+        Me.Button2.Font = New System.Drawing.Font("Consolas", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Button2.Location = New System.Drawing.Point(546, 88)
         Me.Button2.Name = "Button2"
@@ -226,6 +230,9 @@ Partial Class browseplan
         Me.Label4.Text = "Label4"
         Me.Label4.Visible = False
         '
+        'Timer1
+        '
+        '
         'browseplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -268,4 +275,5 @@ Partial Class browseplan
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class
