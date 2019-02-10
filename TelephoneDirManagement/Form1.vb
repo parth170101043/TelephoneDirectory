@@ -113,8 +113,18 @@ Public Class Form1
                    
                 Else
                     MessageBox.Show("invalid captcha ")
-                End If
 
+
+                End If
+            ElseIf count = 1 And r2.Checked = True Then
+                If verify_captcha(captcha, TextBox3.Text) = 1 Then
+                    adminhome.Show()
+                    Me.Hide()
+                Else
+                    MessageBox.Show("invalid captcha ")
+
+
+                End If
             ElseIf count > 1 Then
                 MessageBox.Show("there was some problem please login after some time")
 

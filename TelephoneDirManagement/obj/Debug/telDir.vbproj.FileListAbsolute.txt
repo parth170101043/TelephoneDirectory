@@ -141,3 +141,7 @@ C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.rechar
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.confirm.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.history.resources
 C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.contact_us.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.adminhome.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.manageplan.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.manageuser.resources
+C:\Users\Dell\Desktop\myTelephone\TelephoneDirManagement\obj\Debug\telDir.pendingapproval.resources
