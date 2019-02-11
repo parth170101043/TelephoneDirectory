@@ -63,12 +63,12 @@ Partial Class UserForm1
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.BackColor = System.Drawing.Color.Silver
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(427, -2)
+        Me.Button3.Location = New System.Drawing.Point(397, 2)
         Me.Button3.Margin = New System.Windows.Forms.Padding(0)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(83, 37)
+        Me.Button3.Size = New System.Drawing.Size(83, 33)
         Me.Button3.TabIndex = 11
         Me.Button3.Text = "LOG OUT"
         Me.Button3.UseVisualStyleBackColor = False
@@ -76,9 +76,10 @@ Partial Class UserForm1
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(311, 1)
+        Me.Button6.Location = New System.Drawing.Point(302, 1)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(0)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(113, 33)
+        Me.Button6.Size = New System.Drawing.Size(95, 33)
         Me.Button6.TabIndex = 12
         Me.Button6.Text = "Update Info"
         Me.Button6.UseVisualStyleBackColor = True
@@ -86,10 +87,10 @@ Partial Class UserForm1
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(213, 1)
+        Me.Button7.Location = New System.Drawing.Point(207, 1)
         Me.Button7.Margin = New System.Windows.Forms.Padding(0)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(95, 35)
+        Me.Button7.Size = New System.Drawing.Size(95, 33)
         Me.Button7.TabIndex = 13
         Me.Button7.Text = "My Plans"
         Me.Button7.UseVisualStyleBackColor = True
@@ -97,31 +98,32 @@ Partial Class UserForm1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(81, 1)
+        Me.Button1.Location = New System.Drawing.Point(75, 2)
         Me.Button1.Margin = New System.Windows.Forms.Padding(0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 36)
+        Me.Button1.Size = New System.Drawing.Size(132, 33)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "Browse Plans"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackColor = System.Drawing.Color.DarkTurquoise
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button7)
-        Me.Panel1.Location = New System.Drawing.Point(68, 46)
+        Me.Panel1.Location = New System.Drawing.Point(82, 46)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(512, 37)
+        Me.Panel1.Size = New System.Drawing.Size(480, 37)
         Me.Panel1.TabIndex = 15
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(3, 0)
+        Me.Button4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(0, 1)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(0)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 34)
         Me.Button4.TabIndex = 15
@@ -131,6 +133,7 @@ Partial Class UserForm1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Teal
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 11)
         Me.Label2.Name = "Label2"
@@ -155,7 +158,7 @@ Partial Class UserForm1
         Me.Panel2.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(58, 131)
+        Me.Panel2.Location = New System.Drawing.Point(67, 198)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(151, 99)
         Me.Panel2.TabIndex = 17
@@ -163,9 +166,9 @@ Partial Class UserForm1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.BackColor = System.Drawing.Color.Teal
         Me.Label6.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(54, 99)
+        Me.Label6.Location = New System.Drawing.Point(68, 149)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(150, 22)
         Me.Label6.TabIndex = 21
@@ -189,7 +192,7 @@ Partial Class UserForm1
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.TextBox2)
         Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(293, 99)
+        Me.Panel3.Location = New System.Drawing.Point(343, 131)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(287, 175)
         Me.Panel3.TabIndex = 23
@@ -262,7 +265,7 @@ Partial Class UserForm1
         Me.Button5.BackColor = System.Drawing.Color.White
         Me.Button5.Font = New System.Drawing.Font("Consolas", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Red
-        Me.Button5.Location = New System.Drawing.Point(82, 312)
+        Me.Button5.Location = New System.Drawing.Point(88, 379)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(474, 42)
         Me.Button5.TabIndex = 16
@@ -280,7 +283,7 @@ Partial Class UserForm1
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(636, 366)
+        Me.ClientSize = New System.Drawing.Size(677, 508)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel3)

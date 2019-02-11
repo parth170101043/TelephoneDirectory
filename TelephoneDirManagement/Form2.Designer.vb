@@ -164,6 +164,7 @@ Partial Class RegForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(813, 524)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBox1)
