@@ -116,6 +116,7 @@ Partial Class adminhome
         Me.DataGridView1.Location = New System.Drawing.Point(42, 146)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(295, 180)
         Me.DataGridView1.TabIndex = 19

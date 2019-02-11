@@ -22,7 +22,7 @@ Public Class contact_us
             TextBox1.Clear()
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("remove invalid characters")
         End Try
     End Sub
 
@@ -30,4 +30,6 @@ Public Class contact_us
         UserForm1.Show()
         Me.Hide()
     End Sub
+
+
 End Class

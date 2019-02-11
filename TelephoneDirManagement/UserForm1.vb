@@ -11,13 +11,15 @@ Public Class UserForm1
         Timer1.Start()
         Panel1.BackColor = Color.Transparent
         Label1.Text = Label1.Text + Form1.TextBox1.Text
-        Dim MysqlConn As MySqlConnection
-        MysqlConn = New MySqlConnection
-        Dim MyCom As MySqlCommand
-        Dim planid_d As Integer = 0
-        Dim planid_t As Integer = 0
-        Dim reader As MySqlDataReader
+
         Try
+            Dim MysqlConn As MySqlConnection
+            MysqlConn = New MySqlConnection
+            Dim MyCom As MySqlCommand
+            Dim planid_d As Integer = 0
+            Dim planid_t As Integer = 0
+            Dim reader As MySqlDataReader
+
             MysqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
             MysqlConn.Open()
             Dim query As String
@@ -70,6 +72,8 @@ Public Class UserForm1
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+      
+       
 
     End Sub
 

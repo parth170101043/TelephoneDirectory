@@ -18,11 +18,17 @@ Public Class RegForm3
             Dim query As String
 
             'counting the number of entries in the table
-            query = "Select count(*) from user_data.user_table"
+            query = "Select MAX(UID) from user_data.user_table"
             MyCom = New MySqlCommand(query, MysqlConn)
             reader = MyCom.ExecuteReader()
             reader.Read()
-            uid = reader("count(*)")
+            If IsDBNull(reader("MAX(UID)")) Then
+                uid = -1
+            Else
+                uid = reader("MAX(UID)")
+            End If
+
+            uid = uid + 1
             MysqlConn.Close()
 
             'inserting into database

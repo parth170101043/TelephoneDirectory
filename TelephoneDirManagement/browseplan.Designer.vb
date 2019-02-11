@@ -209,6 +209,7 @@ Partial Class browseplan
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 46
+        Me.Label1.Visible = False
         '
         'Label2
         '
@@ -237,6 +238,7 @@ Partial Class browseplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.AntiqueWhite
         Me.ClientSize = New System.Drawing.Size(648, 487)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)

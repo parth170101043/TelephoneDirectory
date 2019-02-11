@@ -26,10 +26,7 @@ Public Class browseplan
         End Try
       
     End Sub
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-       
 
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
@@ -83,11 +80,11 @@ Public Class browseplan
             str = selectedRow.Cells(2).Value.ToString()
             If str = "data" Then
                 TextBox3.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox6.Text = selectedRow.Cells(4).Value.ToString()
+                TextBox6.Text = selectedRow.Cells(3).Value.ToString()
                 Label2.Text = selectedRow.Cells(0).Value.ToString()
             Else
                 TextBox10.Text = selectedRow.Cells(1).Value.ToString()
-                TextBox11.Text = selectedRow.Cells(4).Value.ToString()
+                TextBox11.Text = selectedRow.Cells(3).Value.ToString()
                 Label4.Text = selectedRow.Cells(0).Value.ToString()
             End If
         Catch ex As Exception

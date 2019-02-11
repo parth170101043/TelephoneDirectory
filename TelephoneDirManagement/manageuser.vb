@@ -13,7 +13,7 @@ Public Class manageuser
 
     Private Sub manageuser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim READER As MySqlDataReader
         Try
             MySqlConn.Open()
@@ -35,7 +35,7 @@ Public Class manageuser
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim READER As MySqlDataReader
         Try
             MySqlConn.Open()
@@ -62,7 +62,7 @@ Public Class manageuser
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim READER As MySqlDataReader
         If TextBox_UID.Text = "" And TextBox_Name.Text = "" And TextBox_Phone.Text = "" And TextBox_Email.Text = "" And TextBox_city.Text = "" And TextBox_Gender.Text = "" And TextBox_Occupation.Text = "" Then
             MessageBox.Show("Please enter all the fields!")
@@ -86,7 +86,7 @@ Public Class manageuser
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim READER As MySqlDataReader
         If TextBox_UID.Text = "" And TextBox_Name.Text = "" And TextBox_Phone.Text = "" And TextBox_Email.Text = "" And TextBox_city.Text = "" And TextBox_Gender.Text = "" And TextBox_Occupation.Text = "" Then
             MessageBox.Show("Please enter all the fields!")

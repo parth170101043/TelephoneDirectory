@@ -137,7 +137,7 @@ Public Class Form5
             MessageBox.Show("Changes Saved")
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("invalid input . please recheck")
         End Try
     End Sub
 

@@ -110,7 +110,7 @@ Public Class Form1
                     Else
                         MessageBox.Show("Waiting for approval login after some time")
                     End If
-                   
+
                 Else
                     MessageBox.Show("invalid captcha ")
 
@@ -152,10 +152,14 @@ Public Class Form1
 
     Private Sub r2_CheckedChanged(sender As Object, e As EventArgs) Handles r2.CheckedChanged
         Label1.Text = "ADMIN LOGIN"
+        PictureBox4.Hide()
+        PictureBox3.Left = 120
     End Sub
 
     Private Sub r1_CheckedChanged(sender As Object, e As EventArgs) Handles r1.CheckedChanged
         Label1.Text = "USER LOGIN"
+        PictureBox3.Left = 48
+        PictureBox4.Show()
 
     End Sub
 
@@ -196,4 +200,6 @@ Public Class Form1
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
 
     End Sub
+
+
 End Class

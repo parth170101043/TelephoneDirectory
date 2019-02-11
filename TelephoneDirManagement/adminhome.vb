@@ -26,7 +26,7 @@ Public Class adminhome
     End Sub
     Private Sub load_table()
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim SDA As New MySqlDataAdapter
 
         Dim bSource As New BindingSource
@@ -50,7 +50,7 @@ Public Class adminhome
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Dim SDA As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim bSource As New BindingSource
@@ -75,7 +75,7 @@ Public Class adminhome
     Public Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = "server=localhost;userid=root;password=root;database=user_data"
+        MySqlConn.ConnectionString = "server='" & Form1.TextBox4.Text & "';userid=root;password=root;database=user_data"
         Try
             MySqlConn.Open()
             Dim query As String
@@ -119,4 +119,6 @@ Public Class adminhome
         Label4.Visible = False
         Button7.Visible = False
     End Sub
+
+   
 End Class
