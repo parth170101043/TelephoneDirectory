@@ -208,6 +208,7 @@ Partial Class RegForm2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.telDir.My.Resources.Resources.backg3
         Me.ClientSize = New System.Drawing.Size(821, 514)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)

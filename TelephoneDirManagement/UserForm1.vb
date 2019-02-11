@@ -169,8 +169,8 @@ Public Class UserForm1
         Red = Int(Rnd() * 255)
         Blue = Int(Rnd() * 255)
         Yellow = Int(Rnd() * 255)
-        Green = Int(Rnd() * 255)
 
-        Button2.BackColor = Color.FromArgb(Blue, Red, Green, Yellow)
+
+        Button2.ForeColor = Color.FromArgb(Blue, Red, Yellow)
     End Sub
 End Class

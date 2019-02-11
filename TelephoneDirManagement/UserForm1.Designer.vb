@@ -52,7 +52,7 @@ Partial Class UserForm1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(431, 9)
@@ -108,7 +108,7 @@ Partial Class UserForm1
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -133,7 +133,7 @@ Partial Class UserForm1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Teal
+        Me.Label2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 11)
         Me.Label2.Name = "Label2"
@@ -143,7 +143,7 @@ Partial Class UserForm1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Lime
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(5, 50)
         Me.Button2.Name = "Button2"
@@ -154,8 +154,8 @@ Partial Class UserForm1
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.MintCream
-        Me.Panel2.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BackgroundImage = Global.telDir.My.Resources.Resources.backg1
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(67, 198)
@@ -166,7 +166,7 @@ Partial Class UserForm1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Teal
+        Me.Label6.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label6.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(68, 149)
         Me.Label6.Name = "Label6"
@@ -187,7 +187,7 @@ Partial Class UserForm1
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel3.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
+        Me.Panel3.BackgroundImage = Global.telDir.My.Resources.Resources.backg1
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.TextBox2)
@@ -200,6 +200,7 @@ Partial Class UserForm1
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label9.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(109, 97)
         Me.Label9.Name = "Label9"
@@ -210,6 +211,7 @@ Partial Class UserForm1
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label8.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(109, 3)
         Me.Label8.Name = "Label8"
@@ -251,7 +253,7 @@ Partial Class UserForm1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Label3.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Location = New System.Drawing.Point(18, 13)
@@ -280,8 +282,8 @@ Partial Class UserForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BackgroundImage = Global.telDir.My.Resources.Resources.loginBack
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackgroundImage = Global.telDir.My.Resources.Resources.backg1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(677, 508)
         Me.Controls.Add(Me.Button5)

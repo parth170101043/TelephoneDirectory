@@ -34,14 +34,14 @@ Partial Class RegForm1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -168,6 +168,16 @@ Partial Class RegForm1
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "ISP"
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.telDir.My.Resources.Resources.service_provider
+        Me.PictureBox4.Location = New System.Drawing.Point(171, 315)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(41, 35)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 24
+        Me.PictureBox4.TabStop = False
+        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.telDir.My.Resources.Resources.iconfinder_call_326500
@@ -198,21 +208,12 @@ Partial Class RegForm1
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.telDir.My.Resources.Resources.service_provider
-        Me.PictureBox4.Location = New System.Drawing.Point(171, 315)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(41, 35)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 24
-        Me.PictureBox4.TabStop = False
-        '
         'RegForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.telDir.My.Resources.Resources.backg3
         Me.ClientSize = New System.Drawing.Size(813, 524)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -232,10 +233,10 @@ Partial Class RegForm1
         Me.Controls.Add(Me.Label1)
         Me.Name = "RegForm1"
         Me.Text = "Registration Step1"
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
