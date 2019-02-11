@@ -353,6 +353,30 @@
   <ItemGroup>
     <None Include="Resources\images.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman-standing-with-a-suitcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elliot_Grieveson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Local-growth-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_call_326500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service provider.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
