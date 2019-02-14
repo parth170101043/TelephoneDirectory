@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class history
-
+    
     Private Sub history_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Dim MysqlConn As MySqlConnection
@@ -41,5 +41,6 @@ Public Class history
         UserForm1.Show()
     End Sub
 
+   
    
 End Class

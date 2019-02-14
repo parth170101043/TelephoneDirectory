@@ -301,7 +301,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 22)
         Me.TextBox4.TabIndex = 11
-        Me.TextBox4.Text = "172.16.115.19"
+        Me.TextBox4.Text = "10.12.03.35"
         '
         'Button1
         '

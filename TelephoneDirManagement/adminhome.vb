@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class adminhome
-
+   
     Dim MySqlConn As MySqlConnection
     Dim mycom As MySqlCommand
     Dim dbDataSet As New DataTable
@@ -121,4 +121,8 @@ Public Class adminhome
     End Sub
 
    
+   
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 End Class
