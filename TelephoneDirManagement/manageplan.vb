@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class manageplan
+   
     Dim MySqlConn As MySqlConnection
     Dim mycom As MySqlCommand
     Dim dbDataSet As New DataTable
@@ -60,7 +61,7 @@ Public Class manageplan
                 Else
                     MessageBox.Show("can't update! plans already in use")
                 End If
-               
+
             Catch ex As MySqlException
                 MessageBox.Show(ex.Message)
             Finally
@@ -250,4 +251,6 @@ Public Class manageplan
         End If
 
     End Sub
+
+    
 End Class

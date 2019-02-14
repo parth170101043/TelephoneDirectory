@@ -36,11 +36,13 @@ Public Class confirm
  
                 MysqlConn.Open()
 
-                'updating the balance and dataplan
-                query = "UPDATE user_data.user_table SET balance = '" & bal & "', DataPlan='" & price & "',PlanID_d = '" & browseplan.Label2.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
-                MyCom = New MySqlCommand(query, MysqlConn)
-                reader = MyCom.ExecuteReader()
                 If (transaction = 1) Then
+
+
+                    'updating the balance and dataplan
+                    query = "UPDATE user_data.user_table SET balance = '" & bal & "', DataPlan='" & price & "',PlanID_d = '" & browseplan.Label2.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
+                    MyCom = New MySqlCommand(query, MysqlConn)
+                    reader = MyCom.ExecuteReader()
                     MessageBox.Show("transaction complete! Please Login Again")
                     Application.Restart()
 
@@ -93,11 +95,12 @@ Public Class confirm
                 MysqlConn.Close()
                 MysqlConn.Open()
 
-                'updating the balance and dataplan
-                query = "UPDATE user_data.user_table SET balance = '" & bal & "', Price='" & price & "',PlanID_t = '" & browseplan.Label4.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
-                MyCom = New MySqlCommand(query, MysqlConn)
-                reader = MyCom.ExecuteReader()
                 If (transaction = 1) Then
+
+                    'updating the balance and dataplan
+                    query = "UPDATE user_data.user_table SET balance = '" & bal & "', Price='" & price & "',PlanID_t = '" & browseplan.Label4.Text & "' where userName ='" & Form1.TextBox1.Text & "';"
+                    MyCom = New MySqlCommand(query, MysqlConn)
+                    reader = MyCom.ExecuteReader()
                     MessageBox.Show("transaction complete! Please Login Again")
                     Application.Restart()
 

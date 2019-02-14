@@ -1,14 +1,15 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class UserForm1
     Dim Red, Blue, Green, Yellow As String
+   
     Private Sub bus_Click(sender As Object, e As EventArgs)
         UserForm2.Show()
         Me.Hide()
     End Sub
 
     Private Sub UserForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Enabled = True
-        Timer1.Start()
+        ' Timer1.Enabled = True
+        ' Timer1.Start()
         Panel1.BackColor = Color.Transparent
         Label1.Text = Label1.Text + Form1.TextBox1.Text
 
@@ -173,4 +174,6 @@ Public Class UserForm1
 
         Button2.ForeColor = Color.FromArgb(Blue, Red, Yellow)
     End Sub
+
+    
 End Class

@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class manageuser
+   
     Dim MySqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -117,4 +118,6 @@ Public Class manageuser
         TextBox_Gender.Clear()
         TextBox_Occupation.Clear()
     End Sub
+
+   
 End Class

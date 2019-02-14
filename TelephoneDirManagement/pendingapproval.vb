@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class pendingapproval
+ 
     Dim MySqlConn As MySqlConnection
     Dim mycom As MySqlCommand
     Dim dbDataSet As New DataTable
@@ -40,9 +41,7 @@ Public Class pendingapproval
         load_table()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-       
-    End Sub
+
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         TextBox1.Clear()
@@ -160,7 +159,7 @@ Public Class pendingapproval
         End If
     End Sub
 
-    
+
     Private Sub DataGridView1_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.RowEnter
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
@@ -174,4 +173,6 @@ Public Class pendingapproval
             TextBox7.Text = row.Cells("Occupation").Value.ToString
         End If
     End Sub
+
+    
 End Class
